@@ -4,7 +4,9 @@
 
 <div class="ebnf">
 
-<pre>[Query](#Query "Query")    ::= [Prologue](#Prologue "Prologue") ( [SelectQuery](#SelectQuery "SelectQuery") | [ConstructQuery](#ConstructQuery "ConstructQuery") | [DescribeQuery](#DescribeQuery "DescribeQuery") | [AskQuery](#AskQuery "AskQuery") )</pre>
+```
+Query    ::= Prologue ( SelectQuery | ConstructQuery | DescribeQuery | AskQuery )
+```
 
 </div>
 
