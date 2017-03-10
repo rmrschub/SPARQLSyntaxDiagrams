@@ -1,0 +1,2379 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="generator" content="Railroad Diagram Generator 1.46.1459"><style type="text/css" xml:space="preserve">
+    ::-moz-selection
+    {
+      color: #FFFAF0;
+      background: #0F0A00;
+    }
+    ::selection
+    {
+      color: #FFFAF0;
+      background: #0F0A00;
+    }      
+    .ebnf a
+    {
+      text-decoration: none;
+    }
+    .ebnf a:hover
+    {
+      color: #050300;
+      text-decoration: underline;
+    }    
+    .signature
+    {
+      color: #805500;
+      font-size: 11px;
+      text-align: right;
+    }
+    body
+    {
+      font: normal 12px Verdana, sans-serif;
+      color: #0F0A00;
+      background: #FFFAF0;
+    }
+    a:link, a:visited
+    {
+      color: #0F0A00;
+    }
+    a:link.signature, a:visited.signature
+    {
+      color: #805500;
+    }
+    a.button, #tabs li a
+    {
+      padding: 0.25em 0.5em;
+      border: 1px solid #805500;
+      background: #F1E2C6;
+      color: #805500;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.button:hover, #tabs li a:hover
+    {
+      color: #050300;
+      background: #FFF0D1;
+      border-color: #050300;       
+    }     
+    #tabs
+    {
+      padding: 3px 10px;
+      margin-left: 0;
+      margin-top: 58px;
+      border-bottom: 1px solid #0F0A00;
+    }  
+    #tabs li
+    {
+      list-style: none;
+      margin-left: 5px;
+      display: inline;
+    }
+    #tabs li a
+    {     
+      border-bottom: 1px solid #0F0A00;
+    }
+    #tabs li a.active
+    {
+      color: #0F0A00;
+      background: #FFFAF0;
+      border-color: #0F0A00;
+      border-bottom: 1px solid #FFFAF0;
+      outline: none;
+    }
+    #divs div
+    {
+      display: none;
+      overflow:auto;
+    }
+    #divs div.active
+    {
+      display: block;
+    }
+    #text
+    {
+      border-color: #805500;
+      background: #FFFDFA;
+      color: #050300;
+    }
+    .small
+    {
+      vertical-align: top;
+      text-align: right;
+      font-size: 9px;
+      font-weight: normal;
+      line-height: 120%;
+    }
+    td.small
+    {
+      padding-top: 0px;
+    }
+    .hidden
+    {
+      visibility: hidden;
+    }
+    td:hover .hidden 
+    {
+      visibility: visible;
+    }
+    div.download
+    {
+      display: none;
+      background: #FFFAF0;
+      position: absolute;
+      right: 34px;
+      top: 94px;
+      padding: 10px;
+      border: 1px dotted #0F0A00;
+    }
+    #divs div.ebnf, div.ebnf
+    {
+      display: block;
+      padding-left: 16px;
+      padding-top: 2px; 
+      padding-bottom: 2px; 
+      background: #FFF0D1;
+    }
+    tr.option-line td:first-child
+    {
+      text-align: right
+    }
+    tr.option-text td
+    {
+      padding-bottom: 10px
+    }
+    table.palette
+    {
+      border-top: 1px solid #050300;
+      border-right: 1px solid #050300;
+      margin-bottom: 4px
+    }
+    td.palette
+    {
+      border-bottom: 1px solid #050300;
+      border-left: 1px solid #050300;
+    }
+    a.palette
+    {
+      padding: 2px 3px 2px 10px;
+      text-decoration: none;
+    }
+    .palette
+    {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      -ms-user-select: none;
+    }
+  </style></head>
+   <body>
+      
+      <p style="font-size: 14px; font-weight:bold"><a name="Query">Query:</a></p>
+      <img border="0" src="diagram/Query.png" height="168" width="304" usemap="#Query.map"><map name="Query.map">
+         <area shape="rect" coords="29,1,101,33" href="#Prologue" title="Prologue">
+         <area shape="rect" coords="141,1,233,33" href="#SelectQuery" title="SelectQuery">
+         <area shape="rect" coords="141,45,255,77" href="#ConstructQuery" title="ConstructQuery">
+         <area shape="rect" coords="141,89,247,121" href="#DescribeQuery" title="DescribeQuery">
+         <area shape="rect" coords="141,133,219,165" href="#AskQuery" title="AskQuery"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Query" title="Query" shape="rect">Query</a>    ::= <a href="#Prologue" title="Prologue" shape="rect">Prologue</a> ( <a href="#SelectQuery" title="SelectQuery" shape="rect">SelectQuery</a> | <a href="#ConstructQuery" title="ConstructQuery" shape="rect">ConstructQuery</a> | <a href="#DescribeQuery" title="DescribeQuery" shape="rect">DescribeQuery</a> | <a href="#AskQuery" title="AskQuery" shape="rect">AskQuery</a> )</pre></div>
+         
+      </p>
+      
+      <p>no references</p><br><p style="font-size: 14px; font-weight:bold"><a name="Prologue">Prologue:</a></p>
+      <img border="0" src="diagram/Prologue.png" height="102" width="310" usemap="#Prologue.map"><map name="Prologue.map">
+         <area shape="rect" coords="49,67,123,99" href="#BaseDecl" title="BaseDecl">
+         <area shape="rect" coords="183,1,261,33" href="#PrefixDecl" title="PrefixDecl"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Prologue" title="Prologue" shape="rect">Prologue</a> ::= <a href="#BaseDecl" title="BaseDecl" shape="rect">BaseDecl</a>? <a href="#PrefixDecl" title="PrefixDecl" shape="rect">PrefixDecl</a>*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Query" title="Query">Query</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BaseDecl">BaseDecl:</a></p>
+      <img border="0" src="diagram/BaseDecl.png" height="36" width="198" usemap="#BaseDecl.map"><map name="BaseDecl.map">
+         <area shape="rect" coords="103,1,169,33" href="#IRI_REF" title="IRI_REF"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BaseDecl" title="BaseDecl" shape="rect">BaseDecl</a> ::= 'BASE' <a href="#IRI_REF" title="IRI_REF" shape="rect">IRI_REF</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Prologue" title="Prologue">Prologue</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PrefixDecl">PrefixDecl:</a></p>
+      <img border="0" src="diagram/PrefixDecl.png" height="36" width="320" usemap="#PrefixDecl.map"><map name="PrefixDecl.map">
+         <area shape="rect" coords="119,1,205,33" href="#PNAME_NS" title="PNAME_NS">
+         <area shape="rect" coords="225,1,291,33" href="#IRI_REF" title="IRI_REF"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PrefixDecl" title="PrefixDecl" shape="rect">PrefixDecl</a>
+         ::= 'PREFIX' <a href="#PNAME_NS" title="PNAME_NS" shape="rect">PNAME_NS</a> <a href="#IRI_REF" title="IRI_REF" shape="rect">IRI_REF</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Prologue" title="Prologue">Prologue</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="SelectQuery">SelectQuery:</a></p>
+      <img border="0" src="diagram/SelectQuery.png" height="146" width="832" usemap="#SelectQuery.map"><map name="SelectQuery.map">
+         <area shape="rect" coords="305,35,345,67" href="#Var" title="Var">
+         <area shape="rect" coords="425,1,531,33" href="#DatasetClause" title="DatasetClause">
+         <area shape="rect" coords="571,35,669,67" href="#WhereClause" title="WhereClause">
+         <area shape="rect" coords="689,35,803,67" href="#SolutionModifier" title="SolutionModifier"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#SelectQuery" title="SelectQuery" shape="rect">SelectQuery</a>
+         ::= 'SELECT' ( 'DISTINCT' | 'REDUCED' )? ( <a href="#Var" title="Var" shape="rect">Var</a>+ | '*' ) <a href="#DatasetClause" title="DatasetClause" shape="rect">DatasetClause</a>* <a href="#WhereClause" title="WhereClause" shape="rect">WhereClause</a> <a href="#SolutionModifier" title="SolutionModifier" shape="rect">SolutionModifier</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Query" title="Query">Query</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ConstructQuery">ConstructQuery:</a></p>
+      <img border="0" src="diagram/ConstructQuery.png" height="70" width="730" usemap="#ConstructQuery.map"><map name="ConstructQuery.map">
+         <area shape="rect" coords="151,35,283,67" href="#ConstructTemplate" title="ConstructTemplate">
+         <area shape="rect" coords="323,1,429,33" href="#DatasetClause" title="DatasetClause">
+         <area shape="rect" coords="469,35,567,67" href="#WhereClause" title="WhereClause">
+         <area shape="rect" coords="587,35,701,67" href="#SolutionModifier" title="SolutionModifier"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ConstructQuery" title="ConstructQuery" shape="rect">ConstructQuery</a>
+         ::= 'CONSTRUCT' <a href="#ConstructTemplate" title="ConstructTemplate" shape="rect">ConstructTemplate</a> <a href="#DatasetClause" title="DatasetClause" shape="rect">DatasetClause</a>* <a href="#WhereClause" title="WhereClause" shape="rect">WhereClause</a> <a href="#SolutionModifier" title="SolutionModifier" shape="rect">SolutionModifier</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Query" title="Query">Query</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DescribeQuery">DescribeQuery:</a></p>
+      <img border="0" src="diagram/DescribeQuery.png" height="114" width="790" usemap="#DescribeQuery.map"><map name="DescribeQuery.map">
+         <area shape="rect" coords="177,35,263,67" href="#VarOrIRIref" title="VarOrIRIref">
+         <area shape="rect" coords="343,1,449,33" href="#DatasetClause" title="DatasetClause">
+         <area shape="rect" coords="509,67,607,99" href="#WhereClause" title="WhereClause">
+         <area shape="rect" coords="647,35,761,67" href="#SolutionModifier" title="SolutionModifier"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DescribeQuery" title="DescribeQuery" shape="rect">DescribeQuery</a>
+         ::= 'DESCRIBE' ( <a href="#VarOrIRIref" title="VarOrIRIref" shape="rect">VarOrIRIref</a>+ | '*' ) <a href="#DatasetClause" title="DatasetClause" shape="rect">DatasetClause</a>* <a href="#WhereClause" title="WhereClause" shape="rect">WhereClause</a>? <a href="#SolutionModifier" title="SolutionModifier" shape="rect">SolutionModifier</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Query" title="Query">Query</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="AskQuery">AskQuery:</a></p>
+      <img border="0" src="diagram/AskQuery.png" height="70" width="390" usemap="#AskQuery.map"><map name="AskQuery.map">
+         <area shape="rect" coords="117,1,223,33" href="#DatasetClause" title="DatasetClause">
+         <area shape="rect" coords="263,35,361,67" href="#WhereClause" title="WhereClause"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#AskQuery" title="AskQuery" shape="rect">AskQuery</a> ::= 'ASK' <a href="#DatasetClause" title="DatasetClause" shape="rect">DatasetClause</a>* <a href="#WhereClause" title="WhereClause" shape="rect">WhereClause</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Query" title="Query">Query</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DatasetClause">DatasetClause:</a></p>
+      <img border="0" src="diagram/DatasetClause.png" height="80" width="314" usemap="#DatasetClause.map"><map name="DatasetClause.map">
+         <area shape="rect" coords="127,1,263,33" href="#DefaultGraphClause" title="DefaultGraphClause">
+         <area shape="rect" coords="127,45,265,77" href="#NamedGraphClause" title="NamedGraphClause"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DatasetClause" title="DatasetClause" shape="rect">DatasetClause</a>
+         ::= 'FROM' ( <a href="#DefaultGraphClause" title="DefaultGraphClause" shape="rect">DefaultGraphClause</a> | <a href="#NamedGraphClause" title="NamedGraphClause" shape="rect">NamedGraphClause</a> )</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#AskQuery" title="AskQuery">AskQuery</a></li>
+            
+            <li><a href="#ConstructQuery" title="ConstructQuery">ConstructQuery</a></li>
+            
+            <li><a href="#DescribeQuery" title="DescribeQuery">DescribeQuery</a></li>
+            
+            <li><a href="#SelectQuery" title="SelectQuery">SelectQuery</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DefaultGraphClause">DefaultGraphClause:</a></p>
+      <img border="0" src="diagram/DefaultGraphClause.png" height="36" width="168" usemap="#DefaultGraphClause.map"><map name="DefaultGraphClause.map">
+         <area shape="rect" coords="29,1,139,33" href="#SourceSelector" title="SourceSelector"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DefaultGraphClause" title="DefaultGraphClause" shape="rect">DefaultGraphClause</a>
+         ::= <a href="#SourceSelector" title="SourceSelector" shape="rect">SourceSelector</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DatasetClause" title="DatasetClause">DatasetClause</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NamedGraphClause">NamedGraphClause:</a></p>
+      <img border="0" src="diagram/NamedGraphClause.png" height="36" width="256" usemap="#NamedGraphClause.map"><map name="NamedGraphClause.map">
+         <area shape="rect" coords="117,1,227,33" href="#SourceSelector" title="SourceSelector"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NamedGraphClause" title="NamedGraphClause" shape="rect">NamedGraphClause</a>
+         ::= 'NAMED' <a href="#SourceSelector" title="SourceSelector" shape="rect">SourceSelector</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DatasetClause" title="DatasetClause">DatasetClause</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="SourceSelector">SourceSelector:</a></p>
+      <img border="0" src="diagram/SourceSelector.png" height="36" width="110" usemap="#SourceSelector.map"><map name="SourceSelector.map">
+         <area shape="rect" coords="29,1,81,33" href="#IRIref" title="IRIref"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#SourceSelector" title="SourceSelector" shape="rect">SourceSelector</a>
+         ::= <a href="#IRIref" title="IRIref" shape="rect">IRIref</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DefaultGraphClause" title="DefaultGraphClause">DefaultGraphClause</a></li>
+            
+            <li><a href="#NamedGraphClause" title="NamedGraphClause">NamedGraphClause</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="WhereClause">WhereClause:</a></p>
+      <img border="0" src="diagram/WhereClause.png" height="68" width="322" usemap="#WhereClause.map"><map name="WhereClause.map">
+         <area shape="rect" coords="157,1,293,33" href="#GroupGraphPattern" title="GroupGraphPattern"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#WhereClause" title="WhereClause" shape="rect">WhereClause</a>
+         ::= 'WHERE'? <a href="#GroupGraphPattern" title="GroupGraphPattern" shape="rect">GroupGraphPattern</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#AskQuery" title="AskQuery">AskQuery</a></li>
+            
+            <li><a href="#ConstructQuery" title="ConstructQuery">ConstructQuery</a></li>
+            
+            <li><a href="#DescribeQuery" title="DescribeQuery">DescribeQuery</a></li>
+            
+            <li><a href="#SelectQuery" title="SelectQuery">SelectQuery</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="SolutionModifier">SolutionModifier:</a></p>
+      <img border="0" src="diagram/SolutionModifier.png" height="56" width="380" usemap="#SolutionModifier.map"><map name="SolutionModifier.map">
+         <area shape="rect" coords="49,21,141,53" href="#OrderClause" title="OrderClause">
+         <area shape="rect" coords="201,21,331,53" href="#LimitOffsetClauses" title="LimitOffsetClauses"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#SolutionModifier" title="SolutionModifier" shape="rect">SolutionModifier</a>
+         ::= <a href="#OrderClause" title="OrderClause" shape="rect">OrderClause</a>? <a href="#LimitOffsetClauses" title="LimitOffsetClauses" shape="rect">LimitOffsetClauses</a>?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ConstructQuery" title="ConstructQuery">ConstructQuery</a></li>
+            
+            <li><a href="#DescribeQuery" title="DescribeQuery">DescribeQuery</a></li>
+            
+            <li><a href="#SelectQuery" title="SelectQuery">SelectQuery</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="LimitOffsetClauses">LimitOffsetClauses:</a></p>
+      <img border="0" src="diagram/LimitOffsetClauses.png" height="144" width="338" usemap="#LimitOffsetClauses.map"><map name="LimitOffsetClauses.map">
+         <area shape="rect" coords="49,1,135,33" href="#LimitClause" title="LimitClause">
+         <area shape="rect" coords="175,33,269,65" href="#OffsetClause" title="OffsetClause">
+         <area shape="rect" coords="49,77,143,109" href="#OffsetClause" title="OffsetClause">
+         <area shape="rect" coords="183,109,269,141" href="#LimitClause" title="LimitClause"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#LimitOffsetClauses" title="LimitOffsetClauses" shape="rect">LimitOffsetClauses</a>
+         ::= <a href="#LimitClause" title="LimitClause" shape="rect">LimitClause</a> <a href="#OffsetClause" title="OffsetClause" shape="rect">OffsetClause</a>?
+           | <a href="#OffsetClause" title="OffsetClause" shape="rect">OffsetClause</a> <a href="#LimitClause" title="LimitClause" shape="rect">LimitClause</a>?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#SolutionModifier" title="SolutionModifier">SolutionModifier</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="OrderClause">OrderClause:</a></p>
+      <img border="0" src="diagram/OrderClause.png" height="52" width="352" usemap="#OrderClause.map"><map name="OrderClause.map">
+         <area shape="rect" coords="193,17,303,49" href="#OrderCondition" title="OrderCondition"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#OrderClause" title="OrderClause" shape="rect">OrderClause</a>
+         ::= 'ORDER' 'BY' <a href="#OrderCondition" title="OrderCondition" shape="rect">OrderCondition</a>+</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#SolutionModifier" title="SolutionModifier">SolutionModifier</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="OrderCondition">OrderCondition:</a></p>
+      <img border="0" src="diagram/OrderCondition.png" height="168" width="360" usemap="#OrderCondition.map"><map name="OrderCondition.map">
+         <area shape="rect" coords="163,1,311,33" href="#BrackettedExpression" title="BrackettedExpression">
+         <area shape="rect" coords="49,89,131,121" href="#Constraint" title="Constraint">
+         <area shape="rect" coords="49,133,89,165" href="#Var" title="Var"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#OrderCondition" title="OrderCondition" shape="rect">OrderCondition</a>
+         ::= ( 'ASC' | 'DESC' ) <a href="#BrackettedExpression" title="BrackettedExpression" shape="rect">BrackettedExpression</a>
+           | ( <a href="#Constraint" title="Constraint" shape="rect">Constraint</a> | <a href="#Var" title="Var" shape="rect">Var</a> )</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#OrderClause" title="OrderClause">OrderClause</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="LimitClause">LimitClause:</a></p>
+      <img border="0" src="diagram/LimitClause.png" height="36" width="208" usemap="#LimitClause.map"><map name="LimitClause.map">
+         <area shape="rect" coords="109,1,179,33" href="#INTEGER" title="INTEGER"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#LimitClause" title="LimitClause" shape="rect">LimitClause</a>
+         ::= 'LIMIT' <a href="#INTEGER" title="INTEGER" shape="rect">INTEGER</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#LimitOffsetClauses" title="LimitOffsetClauses">LimitOffsetClauses</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="OffsetClause">OffsetClause:</a></p>
+      <img border="0" src="diagram/OffsetClause.png" height="36" width="218" usemap="#OffsetClause.map"><map name="OffsetClause.map">
+         <area shape="rect" coords="119,1,189,33" href="#INTEGER" title="INTEGER"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#OffsetClause" title="OffsetClause" shape="rect">OffsetClause</a>
+         ::= 'OFFSET' <a href="#INTEGER" title="INTEGER" shape="rect">INTEGER</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#LimitOffsetClauses" title="LimitOffsetClauses">LimitOffsetClauses</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="GroupGraphPattern">GroupGraphPattern:</a></p>
+      <img border="0" src="diagram/GroupGraphPattern.png" height="146" width="476" usemap="#GroupGraphPattern.map"><map name="GroupGraphPattern.map">
+         <area shape="rect" coords="117,111,205,143" href="#TriplesBlock" title="TriplesBlock">
+         <area shape="rect" coords="201,1,359,33" href="#GraphPatternNotTriples" title="GraphPatternNotTriples">
+         <area shape="rect" coords="201,45,249,77" href="#Filter" title="Filter"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#GroupGraphPattern" title="GroupGraphPattern" shape="rect">GroupGraphPattern</a>
+         ::= '{' <a href="#TriplesBlock" title="TriplesBlock" shape="rect">TriplesBlock</a>? ( ( <a href="#GraphPatternNotTriples" title="GraphPatternNotTriples" shape="rect">GraphPatternNotTriples</a> | <a href="#Filter" title="Filter" shape="rect">Filter</a> ) '.'? <a href="#TriplesBlock" title="TriplesBlock" shape="rect">TriplesBlock</a>? )* '}'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphGraphPattern" title="GraphGraphPattern">GraphGraphPattern</a></li>
+            
+            <li><a href="#GroupOrUnionGraphPattern" title="GroupOrUnionGraphPattern">GroupOrUnionGraphPattern</a></li>
+            
+            <li><a href="#OptionalGraphPattern" title="OptionalGraphPattern">OptionalGraphPattern</a></li>
+            
+            <li><a href="#WhereClause" title="WhereClause">WhereClause</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="TriplesBlock">TriplesBlock:</a></p>
+      <img border="0" src="diagram/TriplesBlock.png" height="100" width="426" usemap="#TriplesBlock.map"><map name="TriplesBlock.map">
+         <area shape="rect" coords="29,1,165,33" href="#TriplesSameSubject" title="TriplesSameSubject">
+         <area shape="rect" coords="269,65,357,97" href="#TriplesBlock" title="TriplesBlock"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#TriplesBlock" title="TriplesBlock" shape="rect">TriplesBlock</a>
+         ::= <a href="#TriplesSameSubject" title="TriplesSameSubject" shape="rect">TriplesSameSubject</a> ( '.' <a href="#TriplesBlock" title="TriplesBlock" shape="rect">TriplesBlock</a>? )?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GroupGraphPattern" title="GroupGraphPattern">GroupGraphPattern</a></li>
+            
+            <li><a href="#TriplesBlock" title="TriplesBlock">TriplesBlock</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="GraphPatternNotTriples">GraphPatternNotTriples:</a></p>
+      <img border="0" src="diagram/GraphPatternNotTriples.png" height="124" width="282" usemap="#GraphPatternNotTriples.map"><map name="GraphPatternNotTriples.map">
+         <area shape="rect" coords="49,1,197,33" href="#OptionalGraphPattern" title="OptionalGraphPattern">
+         <area shape="rect" coords="49,45,233,77" href="#GroupOrUnionGraphPattern" title="GroupOrUnionGraphPattern">
+         <area shape="rect" coords="49,89,183,121" href="#GraphGraphPattern" title="GraphGraphPattern"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#GraphPatternNotTriples" title="GraphPatternNotTriples" shape="rect">GraphPatternNotTriples</a>
+         ::= <a href="#OptionalGraphPattern" title="OptionalGraphPattern" shape="rect">OptionalGraphPattern</a>
+           | <a href="#GroupOrUnionGraphPattern" title="GroupOrUnionGraphPattern" shape="rect">GroupOrUnionGraphPattern</a>
+           | <a href="#GraphGraphPattern" title="GraphGraphPattern" shape="rect">GraphGraphPattern</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GroupGraphPattern" title="GroupGraphPattern">GroupGraphPattern</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="OptionalGraphPattern">OptionalGraphPattern:</a></p>
+      <img border="0" src="diagram/OptionalGraphPattern.png" height="36" width="304" usemap="#OptionalGraphPattern.map"><map name="OptionalGraphPattern.map">
+         <area shape="rect" coords="139,1,275,33" href="#GroupGraphPattern" title="GroupGraphPattern"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#OptionalGraphPattern" title="OptionalGraphPattern" shape="rect">OptionalGraphPattern</a>
+         ::= 'OPTIONAL' <a href="#GroupGraphPattern" title="GroupGraphPattern" shape="rect">GroupGraphPattern</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphPatternNotTriples" title="GraphPatternNotTriples">GraphPatternNotTriples</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="GraphGraphPattern">GraphGraphPattern:</a></p>
+      <img border="0" src="diagram/GraphGraphPattern.png" height="36" width="386" usemap="#GraphGraphPattern.map"><map name="GraphGraphPattern.map">
+         <area shape="rect" coords="115,1,201,33" href="#VarOrIRIref" title="VarOrIRIref">
+         <area shape="rect" coords="221,1,357,33" href="#GroupGraphPattern" title="GroupGraphPattern"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#GraphGraphPattern" title="GraphGraphPattern" shape="rect">GraphGraphPattern</a>
+         ::= 'GRAPH' <a href="#VarOrIRIref" title="VarOrIRIref" shape="rect">VarOrIRIref</a> <a href="#GroupGraphPattern" title="GroupGraphPattern" shape="rect">GroupGraphPattern</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphPatternNotTriples" title="GraphPatternNotTriples">GraphPatternNotTriples</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="GroupOrUnionGraphPattern">GroupOrUnionGraphPattern:</a></p>
+      <img border="0" src="diagram/GroupOrUnionGraphPattern.png" height="80" width="234" usemap="#GroupOrUnionGraphPattern.map"><map name="GroupOrUnionGraphPattern.map">
+         <area shape="rect" coords="49,45,185,77" href="#GroupGraphPattern" title="GroupGraphPattern"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#GroupOrUnionGraphPattern" title="GroupOrUnionGraphPattern" shape="rect">GroupOrUnionGraphPattern</a>
+         ::= <a href="#GroupGraphPattern" title="GroupGraphPattern" shape="rect">GroupGraphPattern</a> ( 'UNION' <a href="#GroupGraphPattern" title="GroupGraphPattern" shape="rect">GroupGraphPattern</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphPatternNotTriples" title="GraphPatternNotTriples">GraphPatternNotTriples</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Filter">Filter:</a></p>
+      <img border="0" src="diagram/Filter.png" height="36" width="228" usemap="#Filter.map"><map name="Filter.map">
+         <area shape="rect" coords="117,1,199,33" href="#Constraint" title="Constraint"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Filter" title="Filter" shape="rect">Filter</a>   ::= 'FILTER' <a href="#Constraint" title="Constraint" shape="rect">Constraint</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GroupGraphPattern" title="GroupGraphPattern">GroupGraphPattern</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Constraint">Constraint:</a></p>
+      <img border="0" src="diagram/Constraint.png" height="124" width="246" usemap="#Constraint.map"><map name="Constraint.map">
+         <area shape="rect" coords="49,1,197,33" href="#BrackettedExpression" title="BrackettedExpression">
+         <area shape="rect" coords="49,45,125,77" href="#BuiltInCall" title="BuiltInCall">
+         <area shape="rect" coords="49,89,139,121" href="#FunctionCall" title="FunctionCall"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Constraint" title="Constraint" shape="rect">Constraint</a>
+         ::= <a href="#BrackettedExpression" title="BrackettedExpression" shape="rect">BrackettedExpression</a>
+           | <a href="#BuiltInCall" title="BuiltInCall" shape="rect">BuiltInCall</a>
+           | <a href="#FunctionCall" title="FunctionCall" shape="rect">FunctionCall</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Filter" title="Filter">Filter</a></li>
+            
+            <li><a href="#OrderCondition" title="OrderCondition">OrderCondition</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="FunctionCall">FunctionCall:</a></p>
+      <img border="0" src="diagram/FunctionCall.png" height="36" width="190" usemap="#FunctionCall.map"><map name="FunctionCall.map">
+         <area shape="rect" coords="29,1,81,33" href="#IRIref" title="IRIref">
+         <area shape="rect" coords="101,1,161,33" href="#ArgList" title="ArgList"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#FunctionCall" title="FunctionCall" shape="rect">FunctionCall</a>
+         ::= <a href="#IRIref" title="IRIref" shape="rect">IRIref</a> <a href="#ArgList" title="ArgList" shape="rect">ArgList</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Constraint" title="Constraint">Constraint</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ArgList">ArgList:</a></p>
+      <img border="0" src="diagram/ArgList.png" height="124" width="314" usemap="#ArgList.map"><map name="ArgList.map">
+         <area shape="rect" coords="49,1,87,33" href="#NIL" title="NIL">
+         <area shape="rect" coords="115,89,199,121" href="#Expression" title="Expression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ArgList" title="ArgList" shape="rect">ArgList</a>  ::= <a href="#NIL" title="NIL" shape="rect">NIL</a>
+           | '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ( ',' <a href="#Expression" title="Expression" shape="rect">Expression</a> )* ')'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#FunctionCall" title="FunctionCall">FunctionCall</a></li>
+            
+            <li><a href="#IRIrefOrFunction" title="IRIrefOrFunction">IRIrefOrFunction</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ConstructTemplate">ConstructTemplate:</a></p>
+      <img border="0" src="diagram/ConstructTemplate.png" height="68" width="308" usemap="#ConstructTemplate.map"><map name="ConstructTemplate.map">
+         <area shape="rect" coords="97,33,211,65" href="#ConstructTriples" title="ConstructTriples"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ConstructTemplate" title="ConstructTemplate" shape="rect">ConstructTemplate</a>
+         ::= '{' <a href="#ConstructTriples" title="ConstructTriples" shape="rect">ConstructTriples</a>? '}'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ConstructQuery" title="ConstructQuery">ConstructQuery</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ConstructTriples">ConstructTriples:</a></p>
+      <img border="0" src="diagram/ConstructTriples.png" height="100" width="452" usemap="#ConstructTriples.map"><map name="ConstructTriples.map">
+         <area shape="rect" coords="29,1,165,33" href="#TriplesSameSubject" title="TriplesSameSubject">
+         <area shape="rect" coords="269,65,383,97" href="#ConstructTriples" title="ConstructTriples"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ConstructTriples" title="ConstructTriples" shape="rect">ConstructTriples</a>
+         ::= <a href="#TriplesSameSubject" title="TriplesSameSubject" shape="rect">TriplesSameSubject</a> ( '.' <a href="#ConstructTriples" title="ConstructTriples" shape="rect">ConstructTriples</a>? )?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ConstructTemplate" title="ConstructTemplate">ConstructTemplate</a></li>
+            
+            <li><a href="#ConstructTriples" title="ConstructTriples">ConstructTriples</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="TriplesSameSubject">TriplesSameSubject:</a></p>
+      <img border="0" src="diagram/TriplesSameSubject.png" height="80" width="352" usemap="#TriplesSameSubject.map"><map name="TriplesSameSubject.map">
+         <area shape="rect" coords="49,1,133,33" href="#VarOrTerm" title="VarOrTerm">
+         <area shape="rect" coords="153,1,303,33" href="#PropertyListNotEmpty" title="PropertyListNotEmpty">
+         <area shape="rect" coords="49,45,137,77" href="#TriplesNode" title="TriplesNode">
+         <area shape="rect" coords="157,45,247,77" href="#PropertyList" title="PropertyList"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#TriplesSameSubject" title="TriplesSameSubject" shape="rect">TriplesSameSubject</a>
+         ::= <a href="#VarOrTerm" title="VarOrTerm" shape="rect">VarOrTerm</a> <a href="#PropertyListNotEmpty" title="PropertyListNotEmpty" shape="rect">PropertyListNotEmpty</a>
+           | <a href="#TriplesNode" title="TriplesNode" shape="rect">TriplesNode</a> <a href="#PropertyList" title="PropertyList" shape="rect">PropertyList</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ConstructTriples" title="ConstructTriples">ConstructTriples</a></li>
+            
+            <li><a href="#TriplesBlock" title="TriplesBlock">TriplesBlock</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PropertyListNotEmpty">PropertyListNotEmpty:</a></p>
+      <img border="0" src="diagram/PropertyListNotEmpty.png" height="100" width="530" usemap="#PropertyListNotEmpty.map"><map name="PropertyListNotEmpty.map">
+         <area shape="rect" coords="29,17,75,49" href="#Verb" title="Verb">
+         <area shape="rect" coords="95,17,173,49" href="#ObjectList" title="ObjectList">
+         <area shape="rect" coords="297,49,343,81" href="#Verb" title="Verb">
+         <area shape="rect" coords="363,49,441,81" href="#ObjectList" title="ObjectList"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PropertyListNotEmpty" title="PropertyListNotEmpty" shape="rect">PropertyListNotEmpty</a>
+         ::= <a href="#Verb" title="Verb" shape="rect">Verb</a> <a href="#ObjectList" title="ObjectList" shape="rect">ObjectList</a> ( ';' ( <a href="#Verb" title="Verb" shape="rect">Verb</a> <a href="#ObjectList" title="ObjectList" shape="rect">ObjectList</a> )? )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BlankNodePropertyList" title="BlankNodePropertyList">BlankNodePropertyList</a></li>
+            
+            <li><a href="#PropertyList" title="PropertyList">PropertyList</a></li>
+            
+            <li><a href="#TriplesSameSubject" title="TriplesSameSubject">TriplesSameSubject</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PropertyList">PropertyList:</a></p>
+      <img border="0" src="diagram/PropertyList.png" height="56" width="248" usemap="#PropertyList.map"><map name="PropertyList.map">
+         <area shape="rect" coords="49,21,199,53" href="#PropertyListNotEmpty" title="PropertyListNotEmpty"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PropertyList" title="PropertyList" shape="rect">PropertyList</a>
+         ::= <a href="#PropertyListNotEmpty" title="PropertyListNotEmpty" shape="rect">PropertyListNotEmpty</a>?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#TriplesSameSubject" title="TriplesSameSubject">TriplesSameSubject</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ObjectList">ObjectList:</a></p>
+      <img border="0" src="diagram/ObjectList.png" height="80" width="156" usemap="#ObjectList.map"><map name="ObjectList.map">
+         <area shape="rect" coords="49,45,107,77" href="#Object" title="Object"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ObjectList" title="ObjectList" shape="rect">ObjectList</a>
+         ::= <a href="#Object" title="Object" shape="rect">Object</a> ( ',' <a href="#Object" title="Object" shape="rect">Object</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PropertyListNotEmpty" title="PropertyListNotEmpty">PropertyListNotEmpty</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Object">Object:</a></p>
+      <img border="0" src="diagram/Object.png" height="36" width="144" usemap="#Object.map"><map name="Object.map">
+         <area shape="rect" coords="29,1,115,33" href="#GraphNode" title="GraphNode"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Object" title="Object" shape="rect">Object</a>   ::= <a href="#GraphNode" title="GraphNode" shape="rect">GraphNode</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ObjectList" title="ObjectList">ObjectList</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Verb">Verb:</a></p>
+      <img border="0" src="diagram/Verb.png" height="80" width="184" usemap="#Verb.map"><map name="Verb.map">
+         <area shape="rect" coords="49,1,135,33" href="#VarOrIRIref" title="VarOrIRIref"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Verb" title="Verb" shape="rect">Verb</a>     ::= <a href="#VarOrIRIref" title="VarOrIRIref" shape="rect">VarOrIRIref</a>
+           | 'a'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PropertyListNotEmpty" title="PropertyListNotEmpty">PropertyListNotEmpty</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="TriplesNode">TriplesNode:</a></p>
+      <img border="0" src="diagram/TriplesNode.png" height="80" width="252" usemap="#TriplesNode.map"><map name="TriplesNode.map">
+         <area shape="rect" coords="49,1,127,33" href="#Collection" title="Collection">
+         <area shape="rect" coords="49,45,203,77" href="#BlankNodePropertyList" title="BlankNodePropertyList"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#TriplesNode" title="TriplesNode" shape="rect">TriplesNode</a>
+         ::= <a href="#Collection" title="Collection" shape="rect">Collection</a>
+           | <a href="#BlankNodePropertyList" title="BlankNodePropertyList" shape="rect">BlankNodePropertyList</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphNode" title="GraphNode">GraphNode</a></li>
+            
+            <li><a href="#TriplesSameSubject" title="TriplesSameSubject">TriplesSameSubject</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BlankNodePropertyList">BlankNodePropertyList:</a></p>
+      <img border="0" src="diagram/BlankNodePropertyList.png" height="36" width="300" usemap="#BlankNodePropertyList.map"><map name="BlankNodePropertyList.map">
+         <area shape="rect" coords="75,1,225,33" href="#PropertyListNotEmpty" title="PropertyListNotEmpty"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BlankNodePropertyList" title="BlankNodePropertyList" shape="rect">BlankNodePropertyList</a>
+         ::= '[' <a href="#PropertyListNotEmpty" title="PropertyListNotEmpty" shape="rect">PropertyListNotEmpty</a> ']'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#TriplesNode" title="TriplesNode">TriplesNode</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Collection">Collection:</a></p>
+      <img border="0" src="diagram/Collection.png" height="52" width="276" usemap="#Collection.map"><map name="Collection.map">
+         <area shape="rect" coords="95,17,181,49" href="#GraphNode" title="GraphNode"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Collection" title="Collection" shape="rect">Collection</a>
+         ::= '(' <a href="#GraphNode" title="GraphNode" shape="rect">GraphNode</a>+ ')'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#TriplesNode" title="TriplesNode">TriplesNode</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="GraphNode">GraphNode:</a></p>
+      <img border="0" src="diagram/GraphNode.png" height="80" width="186" usemap="#GraphNode.map"><map name="GraphNode.map">
+         <area shape="rect" coords="49,1,133,33" href="#VarOrTerm" title="VarOrTerm">
+         <area shape="rect" coords="49,45,137,77" href="#TriplesNode" title="TriplesNode"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#GraphNode" title="GraphNode" shape="rect">GraphNode</a>
+         ::= <a href="#VarOrTerm" title="VarOrTerm" shape="rect">VarOrTerm</a>
+           | <a href="#TriplesNode" title="TriplesNode" shape="rect">TriplesNode</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Collection" title="Collection">Collection</a></li>
+            
+            <li><a href="#Object" title="Object">Object</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="VarOrTerm">VarOrTerm:</a></p>
+      <img border="0" src="diagram/VarOrTerm.png" height="80" width="184" usemap="#VarOrTerm.map"><map name="VarOrTerm.map">
+         <area shape="rect" coords="49,1,89,33" href="#Var" title="Var">
+         <area shape="rect" coords="49,45,135,77" href="#GraphTerm" title="GraphTerm"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#VarOrTerm" title="VarOrTerm" shape="rect">VarOrTerm</a>
+         ::= <a href="#Var" title="Var" shape="rect">Var</a>
+           | <a href="#GraphTerm" title="GraphTerm" shape="rect">GraphTerm</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphNode" title="GraphNode">GraphNode</a></li>
+            
+            <li><a href="#TriplesSameSubject" title="TriplesSameSubject">TriplesSameSubject</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="VarOrIRIref">VarOrIRIref:</a></p>
+      <img border="0" src="diagram/VarOrIRIref.png" height="80" width="150" usemap="#VarOrIRIref.map"><map name="VarOrIRIref.map">
+         <area shape="rect" coords="49,1,89,33" href="#Var" title="Var">
+         <area shape="rect" coords="49,45,101,77" href="#IRIref" title="IRIref"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#VarOrIRIref" title="VarOrIRIref" shape="rect">VarOrIRIref</a>
+         ::= <a href="#Var" title="Var" shape="rect">Var</a>
+           | <a href="#IRIref" title="IRIref" shape="rect">IRIref</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DescribeQuery" title="DescribeQuery">DescribeQuery</a></li>
+            
+            <li><a href="#GraphGraphPattern" title="GraphGraphPattern">GraphGraphPattern</a></li>
+            
+            <li><a href="#Verb" title="Verb">Verb</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Var">Var:</a></p>
+      <img border="0" src="diagram/Var.png" height="80" width="150" usemap="#Var.map"><map name="Var.map">
+         <area shape="rect" coords="49,1,101,33" href="#VAR1" title="VAR1">
+         <area shape="rect" coords="49,45,101,77" href="#VAR2" title="VAR2"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Var" title="Var" shape="rect">Var</a>      ::= <a href="#VAR1" title="VAR1" shape="rect">VAR1</a>
+           | <a href="#VAR2" title="VAR2" shape="rect">VAR2</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BuiltInCall" title="BuiltInCall">BuiltInCall</a></li>
+            
+            <li><a href="#OrderCondition" title="OrderCondition">OrderCondition</a></li>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+            <li><a href="#SelectQuery" title="SelectQuery">SelectQuery</a></li>
+            
+            <li><a href="#VarOrIRIref" title="VarOrIRIref">VarOrIRIref</a></li>
+            
+            <li><a href="#VarOrTerm" title="VarOrTerm">VarOrTerm</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="GraphTerm">GraphTerm:</a></p>
+      <img border="0" src="diagram/GraphTerm.png" height="256" width="202" usemap="#GraphTerm.map"><map name="GraphTerm.map">
+         <area shape="rect" coords="49,1,101,33" href="#IRIref" title="IRIref">
+         <area shape="rect" coords="49,45,127,77" href="#RDFLiteral" title="RDFLiteral">
+         <area shape="rect" coords="49,89,153,121" href="#NumericLiteral" title="NumericLiteral">
+         <area shape="rect" coords="49,133,151,165" href="#BooleanLiteral" title="BooleanLiteral">
+         <area shape="rect" coords="49,177,131,209" href="#BlankNode" title="BlankNode">
+         <area shape="rect" coords="49,221,87,253" href="#NIL" title="NIL"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#GraphTerm" title="GraphTerm" shape="rect">GraphTerm</a>
+         ::= <a href="#IRIref" title="IRIref" shape="rect">IRIref</a>
+           | <a href="#RDFLiteral" title="RDFLiteral" shape="rect">RDFLiteral</a>
+           | <a href="#NumericLiteral" title="NumericLiteral" shape="rect">NumericLiteral</a>
+           | <a href="#BooleanLiteral" title="BooleanLiteral" shape="rect">BooleanLiteral</a>
+           | <a href="#BlankNode" title="BlankNode" shape="rect">BlankNode</a>
+           | <a href="#NIL" title="NIL" shape="rect">NIL</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#VarOrTerm" title="VarOrTerm">VarOrTerm</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="Expression">Expression:</a></p>
+      <img border="0" src="diagram/Expression.png" height="36" width="222" usemap="#Expression.map"><map name="Expression.map">
+         <area shape="rect" coords="29,1,193,33" href="#ConditionalOrExpression" title="ConditionalOrExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#Expression" title="Expression" shape="rect">Expression</a>
+         ::= <a href="#ConditionalOrExpression" title="ConditionalOrExpression" shape="rect">ConditionalOrExpression</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ArgList" title="ArgList">ArgList</a></li>
+            
+            <li><a href="#BrackettedExpression" title="BrackettedExpression">BrackettedExpression</a></li>
+            
+            <li><a href="#BuiltInCall" title="BuiltInCall">BuiltInCall</a></li>
+            
+            <li><a href="#RegexExpression" title="RegexExpression">RegexExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ConditionalOrExpression">ConditionalOrExpression:</a></p>
+      <img border="0" src="diagram/ConditionalOrExpression.png" height="80" width="270" usemap="#ConditionalOrExpression.map"><map name="ConditionalOrExpression.map">
+         <area shape="rect" coords="49,45,221,77" href="#ConditionalAndExpression" title="ConditionalAndExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ConditionalOrExpression" title="ConditionalOrExpression" shape="rect">ConditionalOrExpression</a>
+         ::= <a href="#ConditionalAndExpression" title="ConditionalAndExpression" shape="rect">ConditionalAndExpression</a> ( '||' <a href="#ConditionalAndExpression" title="ConditionalAndExpression" shape="rect">ConditionalAndExpression</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Expression" title="Expression">Expression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ConditionalAndExpression">ConditionalAndExpression:</a></p>
+      <img border="0" src="diagram/ConditionalAndExpression.png" height="80" width="190" usemap="#ConditionalAndExpression.map"><map name="ConditionalAndExpression.map">
+         <area shape="rect" coords="49,45,141,77" href="#ValueLogical" title="ValueLogical"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ConditionalAndExpression" title="ConditionalAndExpression" shape="rect">ConditionalAndExpression</a>
+         ::= <a href="#ValueLogical" title="ValueLogical" shape="rect">ValueLogical</a> ( '&amp;&amp;' <a href="#ValueLogical" title="ValueLogical" shape="rect">ValueLogical</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ConditionalOrExpression" title="ConditionalOrExpression">ConditionalOrExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ValueLogical">ValueLogical:</a></p>
+      <img border="0" src="diagram/ValueLogical.png" height="36" width="198" usemap="#ValueLogical.map"><map name="ValueLogical.map">
+         <area shape="rect" coords="29,1,169,33" href="#RelationalExpression" title="RelationalExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ValueLogical" title="ValueLogical" shape="rect">ValueLogical</a>
+         ::= <a href="#RelationalExpression" title="RelationalExpression" shape="rect">RelationalExpression</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ConditionalAndExpression" title="ConditionalAndExpression">ConditionalAndExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="RelationalExpression">RelationalExpression:</a></p>
+      <img border="0" src="diagram/RelationalExpression.png" height="288" width="442" usemap="#RelationalExpression.map"><map name="RelationalExpression.map">
+         <area shape="rect" coords="29,1,161,33" href="#NumericExpression" title="NumericExpression">
+         <area shape="rect" coords="251,33,383,65" href="#NumericExpression" title="NumericExpression">
+         <area shape="rect" coords="255,77,387,109" href="#NumericExpression" title="NumericExpression">
+         <area shape="rect" coords="251,121,383,153" href="#NumericExpression" title="NumericExpression">
+         <area shape="rect" coords="251,165,383,197" href="#NumericExpression" title="NumericExpression">
+         <area shape="rect" coords="261,209,393,241" href="#NumericExpression" title="NumericExpression">
+         <area shape="rect" coords="261,253,393,285" href="#NumericExpression" title="NumericExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#RelationalExpression" title="RelationalExpression" shape="rect">RelationalExpression</a>
+         ::= <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> ( '=' <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> | '!=' <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> | '&lt;' <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> | '&gt;' <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> | '&lt;=' <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> | '&gt;=' <a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a> )?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ValueLogical" title="ValueLogical">ValueLogical</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NumericExpression">NumericExpression:</a></p>
+      <img border="0" src="diagram/NumericExpression.png" height="36" width="188" usemap="#NumericExpression.map"><map name="NumericExpression.map">
+         <area shape="rect" coords="29,1,159,33" href="#AdditiveExpression" title="AdditiveExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NumericExpression" title="NumericExpression" shape="rect">NumericExpression</a>
+         ::= <a href="#AdditiveExpression" title="AdditiveExpression" shape="rect">AdditiveExpression</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#RelationalExpression" title="RelationalExpression">RelationalExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="AdditiveExpression">AdditiveExpression:</a></p>
+      <img border="0" src="diagram/AdditiveExpression.png" height="200" width="564" usemap="#AdditiveExpression.map"><map name="AdditiveExpression.map">
+         <area shape="rect" coords="29,17,187,49" href="#MultiplicativeExpression" title="MultiplicativeExpression">
+         <area shape="rect" coords="317,17,475,49" href="#MultiplicativeExpression" title="MultiplicativeExpression">
+         <area shape="rect" coords="313,61,471,93" href="#MultiplicativeExpression" title="MultiplicativeExpression">
+         <area shape="rect" coords="267,105,417,137" href="#NumericLiteralPositive" title="NumericLiteralPositive">
+         <area shape="rect" coords="267,149,423,181" href="#NumericLiteralNegative" title="NumericLiteralNegative"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#AdditiveExpression" title="AdditiveExpression" shape="rect">AdditiveExpression</a>
+         ::= <a href="#MultiplicativeExpression" title="MultiplicativeExpression" shape="rect">MultiplicativeExpression</a> ( '+' <a href="#MultiplicativeExpression" title="MultiplicativeExpression" shape="rect">MultiplicativeExpression</a> | '-' <a href="#MultiplicativeExpression" title="MultiplicativeExpression" shape="rect">MultiplicativeExpression</a> | <a href="#NumericLiteralPositive" title="NumericLiteralPositive" shape="rect">NumericLiteralPositive</a> | <a href="#NumericLiteralNegative" title="NumericLiteralNegative" shape="rect">NumericLiteralNegative</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericExpression" title="NumericExpression">NumericExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="MultiplicativeExpression">MultiplicativeExpression:</a></p>
+      <img border="0" src="diagram/MultiplicativeExpression.png" height="112" width="482" usemap="#MultiplicativeExpression.map"><map name="MultiplicativeExpression.map">
+         <area shape="rect" coords="29,17,147,49" href="#UnaryExpression" title="UnaryExpression">
+         <area shape="rect" coords="275,17,393,49" href="#UnaryExpression" title="UnaryExpression">
+         <area shape="rect" coords="275,61,393,93" href="#UnaryExpression" title="UnaryExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#MultiplicativeExpression" title="MultiplicativeExpression" shape="rect">MultiplicativeExpression</a>
+         ::= <a href="#UnaryExpression" title="UnaryExpression" shape="rect">UnaryExpression</a> ( '*' <a href="#UnaryExpression" title="UnaryExpression" shape="rect">UnaryExpression</a> | '/' <a href="#UnaryExpression" title="UnaryExpression" shape="rect">UnaryExpression</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#AdditiveExpression" title="AdditiveExpression">AdditiveExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="UnaryExpression">UnaryExpression:</a></p>
+      <img border="0" src="diagram/UnaryExpression.png" height="168" width="278" usemap="#UnaryExpression.map"><map name="UnaryExpression.map">
+         <area shape="rect" coords="93,1,223,33" href="#PrimaryExpression" title="PrimaryExpression">
+         <area shape="rect" coords="99,45,229,77" href="#PrimaryExpression" title="PrimaryExpression">
+         <area shape="rect" coords="95,89,225,121" href="#PrimaryExpression" title="PrimaryExpression">
+         <area shape="rect" coords="49,133,179,165" href="#PrimaryExpression" title="PrimaryExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#UnaryExpression" title="UnaryExpression" shape="rect">UnaryExpression</a>
+         ::= '!' <a href="#PrimaryExpression" title="PrimaryExpression" shape="rect">PrimaryExpression</a>
+           | '+' <a href="#PrimaryExpression" title="PrimaryExpression" shape="rect">PrimaryExpression</a>
+           | '-' <a href="#PrimaryExpression" title="PrimaryExpression" shape="rect">PrimaryExpression</a>
+           | <a href="#PrimaryExpression" title="PrimaryExpression" shape="rect">PrimaryExpression</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#MultiplicativeExpression" title="MultiplicativeExpression">MultiplicativeExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PrimaryExpression">PrimaryExpression:</a></p>
+      <img border="0" src="diagram/PrimaryExpression.png" height="300" width="246" usemap="#PrimaryExpression.map"><map name="PrimaryExpression.map">
+         <area shape="rect" coords="49,1,197,33" href="#BrackettedExpression" title="BrackettedExpression">
+         <area shape="rect" coords="49,45,125,77" href="#BuiltInCall" title="BuiltInCall">
+         <area shape="rect" coords="49,89,165,121" href="#IRIrefOrFunction" title="IRIrefOrFunction">
+         <area shape="rect" coords="49,133,127,165" href="#RDFLiteral" title="RDFLiteral">
+         <area shape="rect" coords="49,177,153,209" href="#NumericLiteral" title="NumericLiteral">
+         <area shape="rect" coords="49,221,151,253" href="#BooleanLiteral" title="BooleanLiteral">
+         <area shape="rect" coords="49,265,89,297" href="#Var" title="Var"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PrimaryExpression" title="PrimaryExpression" shape="rect">PrimaryExpression</a>
+         ::= <a href="#BrackettedExpression" title="BrackettedExpression" shape="rect">BrackettedExpression</a>
+           | <a href="#BuiltInCall" title="BuiltInCall" shape="rect">BuiltInCall</a>
+           | <a href="#IRIrefOrFunction" title="IRIrefOrFunction" shape="rect">IRIrefOrFunction</a>
+           | <a href="#RDFLiteral" title="RDFLiteral" shape="rect">RDFLiteral</a>
+           | <a href="#NumericLiteral" title="NumericLiteral" shape="rect">NumericLiteral</a>
+           | <a href="#BooleanLiteral" title="BooleanLiteral" shape="rect">BooleanLiteral</a>
+           | <a href="#Var" title="Var" shape="rect">Var</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#UnaryExpression" title="UnaryExpression">UnaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BrackettedExpression">BrackettedExpression:</a></p>
+      <img border="0" src="diagram/BrackettedExpression.png" height="36" width="234" usemap="#BrackettedExpression.map"><map name="BrackettedExpression.map">
+         <area shape="rect" coords="75,1,159,33" href="#Expression" title="Expression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BrackettedExpression" title="BrackettedExpression" shape="rect">BrackettedExpression</a>
+         ::= '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Constraint" title="Constraint">Constraint</a></li>
+            
+            <li><a href="#OrderCondition" title="OrderCondition">OrderCondition</a></li>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BuiltInCall">BuiltInCall:</a></p>
+      <img border="0" src="diagram/BuiltInCall.png" height="476" width="562" usemap="#BuiltInCall.map"><map name="BuiltInCall.map">
+         <area shape="rect" coords="161,1,245,33" href="#Expression" title="Expression">
+         <area shape="rect" coords="171,45,255,77" href="#Expression" title="Expression">
+         <area shape="rect" coords="235,89,319,121" href="#Expression" title="Expression">
+         <area shape="rect" coords="383,89,467,121" href="#Expression" title="Expression">
+         <area shape="rect" coords="205,133,289,165" href="#Expression" title="Expression">
+         <area shape="rect" coords="183,177,223,209" href="#Var" title="Var">
+         <area shape="rect" coords="205,221,289,253" href="#Expression" title="Expression">
+         <area shape="rect" coords="353,221,437,253" href="#Expression" title="Expression">
+         <area shape="rect" coords="167,265,251,297" href="#Expression" title="Expression">
+         <area shape="rect" coords="171,309,255,341" href="#Expression" title="Expression">
+         <area shape="rect" coords="191,353,275,385" href="#Expression" title="Expression">
+         <area shape="rect" coords="203,397,287,429" href="#Expression" title="Expression">
+         <area shape="rect" coords="49,441,169,473" href="#RegexExpression" title="RegexExpression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BuiltInCall" title="BuiltInCall" shape="rect">BuiltInCall</a>
+         ::= 'STR' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'LANG' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'LANGMATCHES' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ',' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'DATATYPE' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'BOUND' '(' <a href="#Var" title="Var" shape="rect">Var</a> ')'
+           | 'sameTerm' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ',' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'isIRI' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'isURI' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'isBLANK' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | 'isLITERAL' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ')'
+           | <a href="#RegexExpression" title="RegexExpression" shape="rect">RegexExpression</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Constraint" title="Constraint">Constraint</a></li>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="RegexExpression">RegexExpression:</a></p>
+      <img border="0" src="diagram/RegexExpression.png" height="68" width="654" usemap="#RegexExpression.map"><map name="RegexExpression.map">
+         <area shape="rect" coords="159,1,243,33" href="#Expression" title="Expression">
+         <area shape="rect" coords="307,1,391,33" href="#Expression" title="Expression">
+         <area shape="rect" coords="475,33,559,65" href="#Expression" title="Expression"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#RegexExpression" title="RegexExpression" shape="rect">RegexExpression</a>
+         ::= 'REGEX' '(' <a href="#Expression" title="Expression" shape="rect">Expression</a> ',' <a href="#Expression" title="Expression" shape="rect">Expression</a> ( ',' <a href="#Expression" title="Expression" shape="rect">Expression</a> )? ')'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BuiltInCall" title="BuiltInCall">BuiltInCall</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="IRIrefOrFunction">IRIrefOrFunction:</a></p>
+      <img border="0" src="diagram/IRIrefOrFunction.png" height="68" width="230" usemap="#IRIrefOrFunction.map"><map name="IRIrefOrFunction.map">
+         <area shape="rect" coords="29,1,81,33" href="#IRIref" title="IRIref">
+         <area shape="rect" coords="121,33,181,65" href="#ArgList" title="ArgList"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#IRIrefOrFunction" title="IRIrefOrFunction" shape="rect">IRIrefOrFunction</a>
+         ::= <a href="#IRIref" title="IRIref" shape="rect">IRIref</a> <a href="#ArgList" title="ArgList" shape="rect">ArgList</a>?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="RDFLiteral">RDFLiteral:</a></p>
+      <img border="0" src="diagram/RDFLiteral.png" height="112" width="284" usemap="#RDFLiteral.map"><map name="RDFLiteral.map">
+         <area shape="rect" coords="29,1,83,33" href="#String" title="String">
+         <area shape="rect" coords="123,33,199,65" href="#LANGTAG" title="LANGTAG">
+         <area shape="rect" coords="183,77,235,109" href="#IRIref" title="IRIref"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#RDFLiteral" title="RDFLiteral" shape="rect">RDFLiteral</a>
+         ::= <a href="#String" title="String" shape="rect">String</a> ( <a href="#LANGTAG" title="LANGTAG" shape="rect">LANGTAG</a> | '^^' <a href="#IRIref" title="IRIref" shape="rect">IRIref</a> )?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphTerm" title="GraphTerm">GraphTerm</a></li>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NumericLiteral">NumericLiteral:</a></p>
+      <img border="0" src="diagram/NumericLiteral.png" height="124" width="256" usemap="#NumericLiteral.map"><map name="NumericLiteral.map">
+         <area shape="rect" coords="49,1,207,33" href="#NumericLiteralUnsigned" title="NumericLiteralUnsigned">
+         <area shape="rect" coords="49,45,199,77" href="#NumericLiteralPositive" title="NumericLiteralPositive">
+         <area shape="rect" coords="49,89,205,121" href="#NumericLiteralNegative" title="NumericLiteralNegative"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NumericLiteral" title="NumericLiteral" shape="rect">NumericLiteral</a>
+         ::= <a href="#NumericLiteralUnsigned" title="NumericLiteralUnsigned" shape="rect">NumericLiteralUnsigned</a>
+           | <a href="#NumericLiteralPositive" title="NumericLiteralPositive" shape="rect">NumericLiteralPositive</a>
+           | <a href="#NumericLiteralNegative" title="NumericLiteralNegative" shape="rect">NumericLiteralNegative</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphTerm" title="GraphTerm">GraphTerm</a></li>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NumericLiteralUnsigned">NumericLiteralUnsigned:</a></p>
+      <img border="0" src="diagram/NumericLiteralUnsigned.png" height="124" width="172" usemap="#NumericLiteralUnsigned.map"><map name="NumericLiteralUnsigned.map">
+         <area shape="rect" coords="49,1,119,33" href="#INTEGER" title="INTEGER">
+         <area shape="rect" coords="49,45,123,77" href="#DECIMAL" title="DECIMAL">
+         <area shape="rect" coords="49,89,117,121" href="#DOUBLE" title="DOUBLE"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NumericLiteralUnsigned" title="NumericLiteralUnsigned" shape="rect">NumericLiteralUnsigned</a>
+         ::= <a href="#INTEGER" title="INTEGER" shape="rect">INTEGER</a>
+           | <a href="#DECIMAL" title="DECIMAL" shape="rect">DECIMAL</a>
+           | <a href="#DOUBLE" title="DOUBLE" shape="rect">DOUBLE</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteral" title="NumericLiteral">NumericLiteral</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NumericLiteralPositive">NumericLiteralPositive:</a></p>
+      <img border="0" src="diagram/NumericLiteralPositive.png" height="124" width="234" usemap="#NumericLiteralPositive.map"><map name="NumericLiteralPositive.map">
+         <area shape="rect" coords="49,1,183,33" href="#INTEGER_POSITIVE" title="INTEGER_POSITIVE">
+         <area shape="rect" coords="49,45,185,77" href="#DECIMAL_POSITIVE" title="DECIMAL_POSITIVE">
+         <area shape="rect" coords="49,89,179,121" href="#DOUBLE_POSITIVE" title="DOUBLE_POSITIVE"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NumericLiteralPositive" title="NumericLiteralPositive" shape="rect">NumericLiteralPositive</a>
+         ::= <a href="#INTEGER_POSITIVE" title="INTEGER_POSITIVE" shape="rect">INTEGER_POSITIVE</a>
+           | <a href="#DECIMAL_POSITIVE" title="DECIMAL_POSITIVE" shape="rect">DECIMAL_POSITIVE</a>
+           | <a href="#DOUBLE_POSITIVE" title="DOUBLE_POSITIVE" shape="rect">DOUBLE_POSITIVE</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#AdditiveExpression" title="AdditiveExpression">AdditiveExpression</a></li>
+            
+            <li><a href="#NumericLiteral" title="NumericLiteral">NumericLiteral</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NumericLiteralNegative">NumericLiteralNegative:</a></p>
+      <img border="0" src="diagram/NumericLiteralNegative.png" height="124" width="238" usemap="#NumericLiteralNegative.map"><map name="NumericLiteralNegative.map">
+         <area shape="rect" coords="49,1,187,33" href="#INTEGER_NEGATIVE" title="INTEGER_NEGATIVE">
+         <area shape="rect" coords="49,45,189,77" href="#DECIMAL_NEGATIVE" title="DECIMAL_NEGATIVE">
+         <area shape="rect" coords="49,89,185,121" href="#DOUBLE_NEGATIVE" title="DOUBLE_NEGATIVE"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NumericLiteralNegative" title="NumericLiteralNegative" shape="rect">NumericLiteralNegative</a>
+         ::= <a href="#INTEGER_NEGATIVE" title="INTEGER_NEGATIVE" shape="rect">INTEGER_NEGATIVE</a>
+           | <a href="#DECIMAL_NEGATIVE" title="DECIMAL_NEGATIVE" shape="rect">DECIMAL_NEGATIVE</a>
+           | <a href="#DOUBLE_NEGATIVE" title="DOUBLE_NEGATIVE" shape="rect">DOUBLE_NEGATIVE</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#AdditiveExpression" title="AdditiveExpression">AdditiveExpression</a></li>
+            
+            <li><a href="#NumericLiteral" title="NumericLiteral">NumericLiteral</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BooleanLiteral">BooleanLiteral:</a></p>
+      <img border="0" src="diagram/BooleanLiteral.png" height="80" width="148">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BooleanLiteral" title="BooleanLiteral" shape="rect">BooleanLiteral</a>
+         ::= 'true'
+           | 'false'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphTerm" title="GraphTerm">GraphTerm</a></li>
+            
+            <li><a href="#PrimaryExpression" title="PrimaryExpression">PrimaryExpression</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="String">String:</a></p>
+      <img border="0" src="diagram/String.png" height="168" width="268" usemap="#String.map"><map name="String.map">
+         <area shape="rect" coords="49,1,175,33" href="#STRING_LITERAL1" title="STRING_LITERAL1">
+         <area shape="rect" coords="49,45,175,77" href="#STRING_LITERAL2" title="STRING_LITERAL2">
+         <area shape="rect" coords="49,89,219,121" href="#STRING_LITERAL_LONG1" title="STRING_LITERAL_LONG1">
+         <area shape="rect" coords="49,133,219,165" href="#STRING_LITERAL_LONG2" title="STRING_LITERAL_LONG2"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#String" title="String" shape="rect">String</a>   ::= <a href="#STRING_LITERAL1" title="STRING_LITERAL1" shape="rect">STRING_LITERAL1</a>
+           | <a href="#STRING_LITERAL2" title="STRING_LITERAL2" shape="rect">STRING_LITERAL2</a>
+           | <a href="#STRING_LITERAL_LONG1" title="STRING_LITERAL_LONG1" shape="rect">STRING_LITERAL_LONG1</a>
+           | <a href="#STRING_LITERAL_LONG2" title="STRING_LITERAL_LONG2" shape="rect">STRING_LITERAL_LONG2</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#RDFLiteral" title="RDFLiteral">RDFLiteral</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="IRIref">IRIref:</a></p>
+      <img border="0" src="diagram/IRIref.png" height="80" width="200" usemap="#IRIref.map"><map name="IRIref.map">
+         <area shape="rect" coords="49,1,115,33" href="#IRI_REF" title="IRI_REF">
+         <area shape="rect" coords="49,45,151,77" href="#PrefixedName" title="PrefixedName"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#IRIref" title="IRIref" shape="rect">IRIref</a>   ::= <a href="#IRI_REF" title="IRI_REF" shape="rect">IRI_REF</a>
+           | <a href="#PrefixedName" title="PrefixedName" shape="rect">PrefixedName</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#FunctionCall" title="FunctionCall">FunctionCall</a></li>
+            
+            <li><a href="#GraphTerm" title="GraphTerm">GraphTerm</a></li>
+            
+            <li><a href="#IRIrefOrFunction" title="IRIrefOrFunction">IRIrefOrFunction</a></li>
+            
+            <li><a href="#RDFLiteral" title="RDFLiteral">RDFLiteral</a></li>
+            
+            <li><a href="#SourceSelector" title="SourceSelector">SourceSelector</a></li>
+            
+            <li><a href="#VarOrIRIref" title="VarOrIRIref">VarOrIRIref</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PrefixedName">PrefixedName:</a></p>
+      <img border="0" src="diagram/PrefixedName.png" height="80" width="184" usemap="#PrefixedName.map"><map name="PrefixedName.map">
+         <area shape="rect" coords="49,1,133,33" href="#PNAME_LN" title="PNAME_LN">
+         <area shape="rect" coords="49,45,135,77" href="#PNAME_NS" title="PNAME_NS"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PrefixedName" title="PrefixedName" shape="rect">PrefixedName</a>
+         ::= <a href="#PNAME_LN" title="PNAME_LN" shape="rect">PNAME_LN</a>
+           | <a href="#PNAME_NS" title="PNAME_NS" shape="rect">PNAME_NS</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#IRIref" title="IRIref">IRIref</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BlankNode">BlankNode:</a></p>
+      <img border="0" src="diagram/BlankNode.png" height="80" width="244" usemap="#BlankNode.map"><map name="BlankNode.map">
+         <area shape="rect" coords="49,1,195,33" href="#BLANK_NODE_LABEL" title="BLANK_NODE_LABEL">
+         <area shape="rect" coords="49,45,103,77" href="#ANON" title="ANON"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BlankNode" title="BlankNode" shape="rect">BlankNode</a>
+         ::= <a href="#BLANK_NODE_LABEL" title="BLANK_NODE_LABEL" shape="rect">BLANK_NODE_LABEL</a>
+           | <a href="#ANON" title="ANON" shape="rect">ANON</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#GraphTerm" title="GraphTerm">GraphTerm</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="IRI_REF">IRI_REF:</a></p>
+      <img border="0" src="diagram/IRI_REF.png" height="70" width="446">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#IRI_REF" title="IRI_REF" shape="rect">IRI_REF</a>  ::= '&lt;' ( [^&lt;&gt;"{}|^`\] - [#x0000-#x0020] )* '&gt;'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BaseDecl" title="BaseDecl">BaseDecl</a></li>
+            
+            <li><a href="#IRIref" title="IRIref">IRIref</a></li>
+            
+            <li><a href="#PrefixDecl" title="PrefixDecl">PrefixDecl</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PNAME_NS">PNAME_NS:</a></p>
+      <img border="0" src="diagram/PNAME_NS.png" height="68" width="228" usemap="#PNAME_NS.map"><map name="PNAME_NS.map">
+         <area shape="rect" coords="49,33,135,65" href="#PN_PREFIX" title="PN_PREFIX"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PNAME_NS" title="PNAME_NS" shape="rect">PNAME_NS</a> ::= <a href="#PN_PREFIX" title="PN_PREFIX" shape="rect">PN_PREFIX</a>? ':'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PNAME_LN" title="PNAME_LN">PNAME_LN</a></li>
+            
+            <li><a href="#PrefixDecl" title="PrefixDecl">PrefixDecl</a></li>
+            
+            <li><a href="#PrefixedName" title="PrefixedName">PrefixedName</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PNAME_LN">PNAME_LN:</a></p>
+      <img border="0" src="diagram/PNAME_LN.png" height="36" width="246" usemap="#PNAME_LN.map"><map name="PNAME_LN.map">
+         <area shape="rect" coords="29,1,115,33" href="#PNAME_NS" title="PNAME_NS">
+         <area shape="rect" coords="135,1,217,33" href="#PN_LOCAL" title="PN_LOCAL"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PNAME_LN" title="PNAME_LN" shape="rect">PNAME_LN</a> ::= <a href="#PNAME_NS" title="PNAME_NS" shape="rect">PNAME_NS</a> <a href="#PN_LOCAL" title="PN_LOCAL" shape="rect">PN_LOCAL</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PrefixedName" title="PrefixedName">PrefixedName</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="BLANK_NODE_LABEL">BLANK_NODE_LABEL:</a></p>
+      <img border="0" src="diagram/BLANK_NODE_LABEL.png" height="36" width="194" usemap="#BLANK_NODE_LABEL.map"><map name="BLANK_NODE_LABEL.map">
+         <area shape="rect" coords="83,1,165,33" href="#PN_LOCAL" title="PN_LOCAL"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#BLANK_NODE_LABEL" title="BLANK_NODE_LABEL" shape="rect">BLANK_NODE_LABEL</a>
+         ::= '_:' <a href="#PN_LOCAL" title="PN_LOCAL" shape="rect">PN_LOCAL</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BlankNode" title="BlankNode">BlankNode</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="VAR1">VAR1:</a></p>
+      <img border="0" src="diagram/VAR1.png" height="36" width="182" usemap="#VAR1.map"><map name="VAR1.map">
+         <area shape="rect" coords="75,1,153,33" href="#VARNAME" title="VARNAME"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#VAR1" title="VAR1" shape="rect">VAR1</a>     ::= '?' <a href="#VARNAME" title="VARNAME" shape="rect">VARNAME</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Var" title="Var">Var</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="VAR2">VAR2:</a></p>
+      <img border="0" src="diagram/VAR2.png" height="36" width="184" usemap="#VAR2.map"><map name="VAR2.map">
+         <area shape="rect" coords="77,1,155,33" href="#VARNAME" title="VARNAME"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#VAR2" title="VAR2" shape="rect">VAR2</a>     ::= '$' <a href="#VARNAME" title="VARNAME" shape="rect">VARNAME</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#Var" title="Var">Var</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="LANGTAG">LANGTAG:</a></p>
+      <img border="0" src="diagram/LANGTAG.png" height="172" width="538">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#LANGTAG" title="LANGTAG" shape="rect">LANGTAG</a>  ::= '@' [a-zA-Z]+ ( '-' [a-zA-Z0-9]+ )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#RDFLiteral" title="RDFLiteral">RDFLiteral</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="INTEGER">INTEGER:</a></p>
+      <img border="0" src="diagram/INTEGER.png" height="52" width="160">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#INTEGER" title="INTEGER" shape="rect">INTEGER</a>  ::= [0-9]+</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#INTEGER_NEGATIVE" title="INTEGER_NEGATIVE">INTEGER_NEGATIVE</a></li>
+            
+            <li><a href="#INTEGER_POSITIVE" title="INTEGER_POSITIVE">INTEGER_POSITIVE</a></li>
+            
+            <li><a href="#LimitClause" title="LimitClause">LimitClause</a></li>
+            
+            <li><a href="#NumericLiteralUnsigned" title="NumericLiteralUnsigned">NumericLiteralUnsigned</a></li>
+            
+            <li><a href="#OffsetClause" title="OffsetClause">OffsetClause</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DECIMAL">DECIMAL:</a></p>
+      <img border="0" src="diagram/DECIMAL.png" height="136" width="366">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DECIMAL" title="DECIMAL" shape="rect">DECIMAL</a>  ::= [0-9]+ '.' [0-9]*
+           | '.' [0-9]+</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DECIMAL_NEGATIVE" title="DECIMAL_NEGATIVE">DECIMAL_NEGATIVE</a></li>
+            
+            <li><a href="#DECIMAL_POSITIVE" title="DECIMAL_POSITIVE">DECIMAL_POSITIVE</a></li>
+            
+            <li><a href="#NumericLiteralUnsigned" title="NumericLiteralUnsigned">NumericLiteralUnsigned</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DOUBLE">DOUBLE:</a></p>
+      <img border="0" src="diagram/DOUBLE.png" height="202" width="468" usemap="#DOUBLE.map"><map name="DOUBLE.map">
+         <area shape="rect" coords="337,35,419,67" href="#EXPONENT" title="EXPONENT">
+         <area shape="rect" coords="215,101,297,133" href="#EXPONENT" title="EXPONENT">
+         <area shape="rect" coords="171,167,253,199" href="#EXPONENT" title="EXPONENT"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DOUBLE" title="DOUBLE" shape="rect">DOUBLE</a>   ::= [0-9]+ '.' [0-9]* <a href="#EXPONENT" title="EXPONENT" shape="rect">EXPONENT</a>
+           | '.' [0-9]+ <a href="#EXPONENT" title="EXPONENT" shape="rect">EXPONENT</a>
+           | [0-9]+ <a href="#EXPONENT" title="EXPONENT" shape="rect">EXPONENT</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DOUBLE_NEGATIVE" title="DOUBLE_NEGATIVE">DOUBLE_NEGATIVE</a></li>
+            
+            <li><a href="#DOUBLE_POSITIVE" title="DOUBLE_POSITIVE">DOUBLE_POSITIVE</a></li>
+            
+            <li><a href="#NumericLiteralUnsigned" title="NumericLiteralUnsigned">NumericLiteralUnsigned</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="INTEGER_POSITIVE">INTEGER_POSITIVE:</a></p>
+      <img border="0" src="diagram/INTEGER_POSITIVE.png" height="36" width="178" usemap="#INTEGER_POSITIVE.map"><map name="INTEGER_POSITIVE.map">
+         <area shape="rect" coords="79,1,149,33" href="#INTEGER" title="INTEGER"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#INTEGER_POSITIVE" title="INTEGER_POSITIVE" shape="rect">INTEGER_POSITIVE</a>
+         ::= '+' <a href="#INTEGER" title="INTEGER" shape="rect">INTEGER</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteralPositive" title="NumericLiteralPositive">NumericLiteralPositive</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DECIMAL_POSITIVE">DECIMAL_POSITIVE:</a></p>
+      <img border="0" src="diagram/DECIMAL_POSITIVE.png" height="36" width="182" usemap="#DECIMAL_POSITIVE.map"><map name="DECIMAL_POSITIVE.map">
+         <area shape="rect" coords="79,1,153,33" href="#DECIMAL" title="DECIMAL"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DECIMAL_POSITIVE" title="DECIMAL_POSITIVE" shape="rect">DECIMAL_POSITIVE</a>
+         ::= '+' <a href="#DECIMAL" title="DECIMAL" shape="rect">DECIMAL</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteralPositive" title="NumericLiteralPositive">NumericLiteralPositive</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DOUBLE_POSITIVE">DOUBLE_POSITIVE:</a></p>
+      <img border="0" src="diagram/DOUBLE_POSITIVE.png" height="36" width="176" usemap="#DOUBLE_POSITIVE.map"><map name="DOUBLE_POSITIVE.map">
+         <area shape="rect" coords="79,1,147,33" href="#DOUBLE" title="DOUBLE"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DOUBLE_POSITIVE" title="DOUBLE_POSITIVE" shape="rect">DOUBLE_POSITIVE</a>
+         ::= '+' <a href="#DOUBLE" title="DOUBLE" shape="rect">DOUBLE</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteralPositive" title="NumericLiteralPositive">NumericLiteralPositive</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="INTEGER_NEGATIVE">INTEGER_NEGATIVE:</a></p>
+      <img border="0" src="diagram/INTEGER_NEGATIVE.png" height="36" width="174" usemap="#INTEGER_NEGATIVE.map"><map name="INTEGER_NEGATIVE.map">
+         <area shape="rect" coords="75,1,145,33" href="#INTEGER" title="INTEGER"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#INTEGER_NEGATIVE" title="INTEGER_NEGATIVE" shape="rect">INTEGER_NEGATIVE</a>
+         ::= '-' <a href="#INTEGER" title="INTEGER" shape="rect">INTEGER</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteralNegative" title="NumericLiteralNegative">NumericLiteralNegative</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DECIMAL_NEGATIVE">DECIMAL_NEGATIVE:</a></p>
+      <img border="0" src="diagram/DECIMAL_NEGATIVE.png" height="36" width="178" usemap="#DECIMAL_NEGATIVE.map"><map name="DECIMAL_NEGATIVE.map">
+         <area shape="rect" coords="75,1,149,33" href="#DECIMAL" title="DECIMAL"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DECIMAL_NEGATIVE" title="DECIMAL_NEGATIVE" shape="rect">DECIMAL_NEGATIVE</a>
+         ::= '-' <a href="#DECIMAL" title="DECIMAL" shape="rect">DECIMAL</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteralNegative" title="NumericLiteralNegative">NumericLiteralNegative</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="DOUBLE_NEGATIVE">DOUBLE_NEGATIVE:</a></p>
+      <img border="0" src="diagram/DOUBLE_NEGATIVE.png" height="36" width="172" usemap="#DOUBLE_NEGATIVE.map"><map name="DOUBLE_NEGATIVE.map">
+         <area shape="rect" coords="75,1,143,33" href="#DOUBLE" title="DOUBLE"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#DOUBLE_NEGATIVE" title="DOUBLE_NEGATIVE" shape="rect">DOUBLE_NEGATIVE</a>
+         ::= '-' <a href="#DOUBLE" title="DOUBLE" shape="rect">DOUBLE</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#NumericLiteralNegative" title="NumericLiteralNegative">NumericLiteralNegative</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="EXPONENT">EXPONENT:</a></p>
+      <img border="0" src="diagram/EXPONENT.png" height="128" width="338">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#EXPONENT" title="EXPONENT" shape="rect">EXPONENT</a> ::= [eE] [+#x2D]? [0-9]+</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#DOUBLE" title="DOUBLE">DOUBLE</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="STRING_LITERAL1">STRING_LITERAL1:</a></p>
+      <img border="0" src="diagram/STRING_LITERAL1.png" height="112" width="514" usemap="#STRING_LITERAL1.map"><map name="STRING_LITERAL1.map">
+         <area shape="rect" coords="133,61,193,93" href="#ECHAR" title="ECHAR"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#STRING_LITERAL1" title="STRING_LITERAL1" shape="rect">STRING_LITERAL1</a>
+         ::= "'" ( [^#x0027#x005C#x000A#x000D] | <a href="#ECHAR" title="ECHAR" shape="rect">ECHAR</a> )* "'"</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#String" title="String">String</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="STRING_LITERAL2">STRING_LITERAL2:</a></p>
+      <img border="0" src="diagram/STRING_LITERAL2.png" height="112" width="518" usemap="#STRING_LITERAL2.map"><map name="STRING_LITERAL2.map">
+         <area shape="rect" coords="135,61,195,93" href="#ECHAR" title="ECHAR"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#STRING_LITERAL2" title="STRING_LITERAL2" shape="rect">STRING_LITERAL2</a>
+         ::= '"' ( [^#x0022#x005C#x000A#x000D] | <a href="#ECHAR" title="ECHAR" shape="rect">ECHAR</a> )* '"'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#String" title="String">String</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="STRING_LITERAL_LONG1">STRING_LITERAL_LONG1:</a></p>
+      <img border="0" src="diagram/STRING_LITERAL_LONG1.png" height="144" width="430" usemap="#STRING_LITERAL_LONG1.map"><map name="STRING_LITERAL_LONG1.map">
+         <area shape="rect" coords="229,61,289,93" href="#ECHAR" title="ECHAR"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#STRING_LITERAL_LONG1" title="STRING_LITERAL_LONG1" shape="rect">STRING_LITERAL_LONG1</a>
+         ::= "'''" ( ( "'" | "''" )? ( [^'\] | <a href="#ECHAR" title="ECHAR" shape="rect">ECHAR</a> ) )* "'''"</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#String" title="String">String</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="STRING_LITERAL_LONG2">STRING_LITERAL_LONG2:</a></p>
+      <img border="0" src="diagram/STRING_LITERAL_LONG2.png" height="144" width="458" usemap="#STRING_LITERAL_LONG2.map"><map name="STRING_LITERAL_LONG2.map">
+         <area shape="rect" coords="245,61,305,93" href="#ECHAR" title="ECHAR"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#STRING_LITERAL_LONG2" title="STRING_LITERAL_LONG2" shape="rect">STRING_LITERAL_LONG2</a>
+         ::= '"""' ( ( '"' | '""' )? ( [^"\] | <a href="#ECHAR" title="ECHAR" shape="rect">ECHAR</a> ) )* '"""'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#String" title="String">String</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ECHAR">ECHAR:</a></p>
+      <img border="0" src="diagram/ECHAR.png" height="344" width="174">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ECHAR" title="ECHAR" shape="rect">ECHAR</a>    ::= '\' [tbnrf\"']</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#STRING_LITERAL1" title="STRING_LITERAL1">STRING_LITERAL1</a></li>
+            
+            <li><a href="#STRING_LITERAL2" title="STRING_LITERAL2">STRING_LITERAL2</a></li>
+            
+            <li><a href="#STRING_LITERAL_LONG1" title="STRING_LITERAL_LONG1">STRING_LITERAL_LONG1</a></li>
+            
+            <li><a href="#STRING_LITERAL_LONG2" title="STRING_LITERAL_LONG2">STRING_LITERAL_LONG2</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="NIL">NIL:</a></p>
+      <img border="0" src="diagram/NIL.png" height="70" width="230" usemap="#NIL.map"><map name="NIL.map">
+         <area shape="rect" coords="95,1,135,33" href="#WS" title="WS"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#NIL" title="NIL" shape="rect">NIL</a>      ::= '(' <a href="#WS" title="WS" shape="rect">WS</a>* ')'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ArgList" title="ArgList">ArgList</a></li>
+            
+            <li><a href="#GraphTerm" title="GraphTerm">GraphTerm</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="WS">WS:</a></p>
+      <img border="0" src="diagram/WS.png" height="168" width="188">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#WS" title="WS" shape="rect">WS</a>       ::= #x0020
+           | #x0009
+           | #x000D
+           | #x000A</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#ANON" title="ANON">ANON</a></li>
+            
+            <li><a href="#NIL" title="NIL">NIL</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="ANON">ANON:</a></p>
+      <img border="0" src="diagram/ANON.png" height="70" width="230" usemap="#ANON.map"><map name="ANON.map">
+         <area shape="rect" coords="95,1,135,33" href="#WS" title="WS"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#ANON" title="ANON" shape="rect">ANON</a>     ::= '[' <a href="#WS" title="WS" shape="rect">WS</a>* ']'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BlankNode" title="BlankNode">BlankNode</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PN_CHARS_BASE">PN_CHARS_BASE:</a></p>
+      <img border="0" src="diagram/PN_CHARS_BASE.png" height="608" width="254">
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PN_CHARS_BASE" title="PN_CHARS_BASE" shape="rect">PN_CHARS_BASE</a>
+         ::= [A-Z]
+           | [a-z]
+           | [#x00C0-#x00D6]
+           | [#x00D8-#x00F6]
+           | [#x00F8-#x02FF]
+           | [#x0370-#x037D]
+           | [#x037F-#x1FFF]
+           | [#x200C-#x200D]
+           | [#x2070-#x218F]
+           | [#x2C00-#x2FEF]
+           | [#x3001-#xD7FF]
+           | [#xF900-#xFDCF]
+           | [#xFDF0-#xFFFD]
+           | [#x10000-#xEFFFF]</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PN_CHARS_U" title="PN_CHARS_U">PN_CHARS_U</a></li>
+            
+            <li><a href="#PN_PREFIX" title="PN_PREFIX">PN_PREFIX</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PN_CHARS_U">PN_CHARS_U:</a></p>
+      <img border="0" src="diagram/PN_CHARS_U.png" height="80" width="222" usemap="#PN_CHARS_U.map"><map name="PN_CHARS_U.map">
+         <area shape="rect" coords="49,1,173,33" href="#PN_CHARS_BASE" title="PN_CHARS_BASE"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PN_CHARS_U" title="PN_CHARS_U" shape="rect">PN_CHARS_U</a>
+         ::= <a href="#PN_CHARS_BASE" title="PN_CHARS_BASE" shape="rect">PN_CHARS_BASE</a>
+           | '_'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PN_CHARS" title="PN_CHARS">PN_CHARS</a></li>
+            
+            <li><a href="#PN_LOCAL" title="PN_LOCAL">PN_LOCAL</a></li>
+            
+            <li><a href="#VARNAME" title="VARNAME">VARNAME</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="VARNAME">VARNAME:</a></p>
+      <img border="0" src="diagram/VARNAME.png" height="290" width="404" usemap="#VARNAME.map"><map name="VARNAME.map">
+         <area shape="rect" coords="49,211,151,243" href="#PN_CHARS_U" title="PN_CHARS_U">
+         <area shape="rect" coords="211,177,313,209" href="#PN_CHARS_U" title="PN_CHARS_U"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#VARNAME" title="VARNAME" shape="rect">VARNAME</a>  ::= ( <a href="#PN_CHARS_U" title="PN_CHARS_U" shape="rect">PN_CHARS_U</a> | [0-9] ) ( <a href="#PN_CHARS_U" title="PN_CHARS_U" shape="rect">PN_CHARS_U</a> | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040] )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#VAR1" title="VAR1">VAR1</a></li>
+            
+            <li><a href="#VAR2" title="VAR2">VAR2</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PN_CHARS">PN_CHARS:</a></p>
+      <img border="0" src="diagram/PN_CHARS.png" height="256" width="242" usemap="#PN_CHARS.map"><map name="PN_CHARS.map">
+         <area shape="rect" coords="49,1,151,33" href="#PN_CHARS_U" title="PN_CHARS_U"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PN_CHARS" title="PN_CHARS" shape="rect">PN_CHARS</a> ::= <a href="#PN_CHARS_U" title="PN_CHARS_U" shape="rect">PN_CHARS_U</a>
+           | '-'
+           | [0-9]
+           | #x00B7
+           | [#x0300-#x036F]
+           | [#x203F-#x2040]</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PN_LOCAL" title="PN_LOCAL">PN_LOCAL</a></li>
+            
+            <li><a href="#PN_PREFIX" title="PN_PREFIX">PN_PREFIX</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PN_PREFIX">PN_PREFIX:</a></p>
+      <img border="0" src="diagram/PN_PREFIX.png" height="130" width="474" usemap="#PN_PREFIX.map"><map name="PN_PREFIX.map">
+         <area shape="rect" coords="29,79,153,111" href="#PN_CHARS_BASE" title="PN_CHARS_BASE">
+         <area shape="rect" coords="213,45,299,77" href="#PN_CHARS" title="PN_CHARS">
+         <area shape="rect" coords="339,79,425,111" href="#PN_CHARS" title="PN_CHARS"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PN_PREFIX" title="PN_PREFIX" shape="rect">PN_PREFIX</a>
+         ::= <a href="#PN_CHARS_BASE" title="PN_CHARS_BASE" shape="rect">PN_CHARS_BASE</a> ( ( <a href="#PN_CHARS" title="PN_CHARS" shape="rect">PN_CHARS</a> | '.' )* <a href="#PN_CHARS" title="PN_CHARS" shape="rect">PN_CHARS</a> )?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#PNAME_NS" title="PNAME_NS">PNAME_NS</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="PN_LOCAL">PN_LOCAL:</a></p>
+      <img border="0" src="diagram/PN_LOCAL.png" height="158" width="492" usemap="#PN_LOCAL.map"><map name="PN_LOCAL.map">
+         <area shape="rect" coords="49,79,151,111" href="#PN_CHARS_U" title="PN_CHARS_U">
+         <area shape="rect" coords="231,45,317,77" href="#PN_CHARS" title="PN_CHARS">
+         <area shape="rect" coords="357,79,443,111" href="#PN_CHARS" title="PN_CHARS"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#PN_LOCAL" title="PN_LOCAL" shape="rect">PN_LOCAL</a> ::= ( <a href="#PN_CHARS_U" title="PN_CHARS_U" shape="rect">PN_CHARS_U</a> | [0-9] ) ( ( <a href="#PN_CHARS" title="PN_CHARS" shape="rect">PN_CHARS</a> | '.' )* <a href="#PN_CHARS" title="PN_CHARS" shape="rect">PN_CHARS</a> )?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#BLANK_NODE_LABEL" title="BLANK_NODE_LABEL">BLANK_NODE_LABEL</a></li>
+            
+            <li><a href="#PNAME_LN" title="PNAME_LN">PNAME_LN</a></li>
+            
+         </ul>
+         
+      </p><br><hr>
+      
+      <p>
+         
+         <table border="0" class="signature">
+            
+            <tr>
+               
+               <td style="width: 100%">&nbsp;</td>
+               
+               <td valign="top">
+                  
+                  <nobr class="signature">... generated by <a name="Railroad-Diagram-Generator" class="signature" title="http://www.bottlecaps.de/rr/ui" href="http://www.bottlecaps.de/rr/ui" target="_blank">Railroad Diagram Generator</a></nobr>
+                  
+               </td>
+               
+               <td><a name="Railroad-Diagram-Generator" title="http://www.bottlecaps.de/rr/ui" href="http://www.bottlecaps.de/rr/ui" target="_blank">
+                     <img border="0" src="diagram/rr-1.46.1459.png" height="16" width="16"></a></td>
+               
+            </tr>
+            
+         </table>
+         
+      </p>
+      
+   </body>
+</html>
