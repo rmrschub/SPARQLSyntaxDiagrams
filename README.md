@@ -4,7 +4,7 @@
 
 <div class="ebnf">
 
-```
+```EBNF
 Query    ::= Prologue ( SelectQuery | ConstructQuery | DescribeQuery | AskQuery )
 ```
 
