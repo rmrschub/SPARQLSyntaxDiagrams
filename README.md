@@ -1,4 +1,6 @@
 <a name="Query">Query:</a>
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
                @namespace "http://www.w3.org/2000/svg";
                .line                 {fill: none; stroke: #332200;}
                .bold-line            {stroke: #140E00; shape-rendering: crispEdges; stroke-width:
@@ -23,6 +25,8 @@
                rect.nonterminal      {fill: #FFDF9E; stroke: #332200;}
                rect.text             {fill: none; stroke: none;}    
                polygon.regexp        {fill: #FFECC7; stroke: #332200;}
+</defs>
+</svg>
                
             PrologueSelectQueryConstructQueryDescribeQueryAskQuery
 
