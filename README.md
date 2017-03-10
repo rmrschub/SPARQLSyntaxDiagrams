@@ -6,35 +6,32 @@
 Query    ::= Prologue ( SelectQuery | ConstructQuery | DescribeQuery | AskQuery )
 ```
 
-no references
+## No references
 
----
 
-<a name="Prologue">Prologue:</a>
+# <a name="Prologue">Prologue:</a>
 
 ![](diagram/Prologue.png) <map name="Prologue.map"><area shape="rect" coords="49,67,123,99" href="#BaseDecl" title="BaseDecl"> <area shape="rect" coords="183,1,261,33" href="#PrefixDecl" title="PrefixDecl"></map>
 
-<div class="ebnf">
+```ebnf
+Prologue	  ::=  	BaseDecl? PrefixDecl*
+```
 
-<pre>[Prologue](#Prologue "Prologue") ::= [BaseDecl](#BaseDecl "BaseDecl")? [PrefixDecl](#PrefixDecl "PrefixDecl")*</pre>
-
-</div>
-
-referenced by:
+## Referenced by:
 
 *   [Query](#Query "Query")
 
-<a name="BaseDecl">BaseDecl:</a>
+
+# <a name="BaseDecl">BaseDecl:</a>
 
 ![](diagram/BaseDecl.png) <map name="BaseDecl.map"><area shape="rect" coords="103,1,169,33" href="#IRI_REF" title="IRI_REF"></map>
 
-<div class="ebnf">
 
-<pre>[BaseDecl](#BaseDecl "BaseDecl") ::= 'BASE' [IRI_REF](#IRI_REF "IRI_REF")</pre>
+```ebnf
+Prologue	  ::=  	BaseDecl? PrefixDecl*
+```
 
-</div>
-
-referenced by:
+## Referenced by:
 
 *   [Prologue](#Prologue "Prologue")
 
