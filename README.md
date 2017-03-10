@@ -2,13 +2,13 @@
 
 ![](diagram/Query.png) <map name="Query.map"><area shape="rect" coords="29,1,101,33" href="#Prologue" title="Prologue"> <area shape="rect" coords="141,1,233,33" href="#SelectQuery" title="SelectQuery"> <area shape="rect" coords="141,45,255,77" href="#ConstructQuery" title="ConstructQuery"> <area shape="rect" coords="141,89,247,121" href="#DescribeQuery" title="DescribeQuery"> <area shape="rect" coords="141,133,219,165" href="#AskQuery" title="AskQuery"></map>
 
-<div class="ebnf">
+
 
 ```ebnf
 Query    ::= Prologue ( SelectQuery | ConstructQuery | DescribeQuery | AskQuery )
 ```
 
-</div>
+
 
 no references
 
